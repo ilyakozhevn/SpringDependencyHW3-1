@@ -13,10 +13,9 @@
 		0926BBDB289C2DA4009BB6D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0926BBD9289C2DA4009BB6D4 /* Main.storyboard */; };
 		0926BBDD289C2DA5009BB6D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0926BBDC289C2DA5009BB6D4 /* Assets.xcassets */; };
 		0926BBE0289C2DA5009BB6D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0926BBDE289C2DA5009BB6D4 /* LaunchScreen.storyboard */; };
-		0926BBEA289C31E6009BB6D4 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0926BBE9289C31E6009BB6D4 /* DataStore.swift */; };
-		0926BBEC289C322C009BB6D4 /* RandomAnimationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0926BBEB289C322C009BB6D4 /* RandomAnimationModel.swift */; };
 		0926BBEF289C32A0009BB6D4 /* SpringAnimation in Frameworks */ = {isa = PBXBuildFile; productRef = 0926BBEE289C32A0009BB6D4 /* SpringAnimation */; };
 		0926BBF2289C32B2009BB6D4 /* SpringAnimation in Frameworks */ = {isa = PBXBuildFile; productRef = 0926BBF1289C32B2009BB6D4 /* SpringAnimation */; };
+		093C8E86289D226700F2634D /* AnimationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093C8E85289D226700F2634D /* AnimationModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,8 +27,7 @@
 		0926BBDC289C2DA5009BB6D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0926BBDF289C2DA5009BB6D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0926BBE1289C2DA5009BB6D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0926BBE9289C31E6009BB6D4 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
-		0926BBEB289C322C009BB6D4 /* RandomAnimationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomAnimationModel.swift; sourceTree = "<group>"; };
+		093C8E85289D226700F2634D /* AnimationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,17 +62,56 @@
 		0926BBD2289C2DA4009BB6D4 /* SpringDependencyHW3-1 */ = {
 			isa = PBXGroup;
 			children = (
-				0926BBD3289C2DA4009BB6D4 /* AppDelegate.swift */,
-				0926BBD5289C2DA4009BB6D4 /* SceneDelegate.swift */,
-				0926BBD7289C2DA4009BB6D4 /* ViewController.swift */,
-				0926BBD9289C2DA4009BB6D4 /* Main.storyboard */,
-				0926BBDC289C2DA5009BB6D4 /* Assets.xcassets */,
-				0926BBDE289C2DA5009BB6D4 /* LaunchScreen.storyboard */,
-				0926BBE1289C2DA5009BB6D4 /* Info.plist */,
-				0926BBE9289C31E6009BB6D4 /* DataStore.swift */,
-				0926BBEB289C322C009BB6D4 /* RandomAnimationModel.swift */,
+				093C8E87289D26BA00F2634D /* ViewControllers */,
+				093C8E84289D225600F2634D /* Models */,
+				093C8E8A289D272600F2634D /* Storyboards */,
+				093C8E88289D26CC00F2634D /* AppConfig */,
+				093C8E89289D271800F2634D /* Resources */,
 			);
 			path = "SpringDependencyHW3-1";
+			sourceTree = "<group>";
+		};
+		093C8E84289D225600F2634D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				093C8E85289D226700F2634D /* AnimationModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		093C8E87289D26BA00F2634D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0926BBD7289C2DA4009BB6D4 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		093C8E88289D26CC00F2634D /* AppConfig */ = {
+			isa = PBXGroup;
+			children = (
+				0926BBE1289C2DA5009BB6D4 /* Info.plist */,
+				0926BBD3289C2DA4009BB6D4 /* AppDelegate.swift */,
+				0926BBD5289C2DA4009BB6D4 /* SceneDelegate.swift */,
+			);
+			path = AppConfig;
+			sourceTree = "<group>";
+		};
+		093C8E89289D271800F2634D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0926BBDC289C2DA5009BB6D4 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		093C8E8A289D272600F2634D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				0926BBD9289C2DA4009BB6D4 /* Main.storyboard */,
+				0926BBDE289C2DA5009BB6D4 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,10 +194,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				093C8E86289D226700F2634D /* AnimationModel.swift in Sources */,
 				0926BBD8289C2DA4009BB6D4 /* ViewController.swift in Sources */,
-				0926BBEA289C31E6009BB6D4 /* DataStore.swift in Sources */,
 				0926BBD4289C2DA4009BB6D4 /* AppDelegate.swift in Sources */,
-				0926BBEC289C322C009BB6D4 /* RandomAnimationModel.swift in Sources */,
 				0926BBD6289C2DA4009BB6D4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,7 +346,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 27TK5C5WMS;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "SpringDependencyHW3-1/Info.plist";
+				INFOPLIST_FILE = "SpringDependencyHW3-1/AppConfig/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -338,7 +374,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 27TK5C5WMS;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "SpringDependencyHW3-1/Info.plist";
+				INFOPLIST_FILE = "SpringDependencyHW3-1/AppConfig/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
