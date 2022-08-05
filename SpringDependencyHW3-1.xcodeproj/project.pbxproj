@@ -16,6 +16,7 @@
 		0926BBEF289C32A0009BB6D4 /* SpringAnimation in Frameworks */ = {isa = PBXBuildFile; productRef = 0926BBEE289C32A0009BB6D4 /* SpringAnimation */; };
 		0926BBF2289C32B2009BB6D4 /* SpringAnimation in Frameworks */ = {isa = PBXBuildFile; productRef = 0926BBF1289C32B2009BB6D4 /* SpringAnimation */; };
 		093C8E86289D226700F2634D /* AnimationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093C8E85289D226700F2634D /* AnimationModel.swift */; };
+		093C8E8D289D284C00F2634D /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093C8E8C289D284C00F2634D /* DataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		0926BBDF289C2DA5009BB6D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0926BBE1289C2DA5009BB6D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		093C8E85289D226700F2634D /* AnimationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationModel.swift; sourceTree = "<group>"; };
+		093C8E8C289D284C00F2634D /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		0926BBD2289C2DA4009BB6D4 /* SpringDependencyHW3-1 */ = {
 			isa = PBXGroup;
 			children = (
+				093C8E8B289D283700F2634D /* Services */,
 				093C8E87289D26BA00F2634D /* ViewControllers */,
 				093C8E84289D225600F2634D /* Models */,
 				093C8E8A289D272600F2634D /* Storyboards */,
@@ -112,6 +115,14 @@
 				0926BBDE289C2DA5009BB6D4 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		093C8E8B289D283700F2634D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				093C8E8C289D284C00F2634D /* DataStore.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +208,7 @@
 				093C8E86289D226700F2634D /* AnimationModel.swift in Sources */,
 				0926BBD8289C2DA4009BB6D4 /* ViewController.swift in Sources */,
 				0926BBD4289C2DA4009BB6D4 /* AppDelegate.swift in Sources */,
+				093C8E8D289D284C00F2634D /* DataStore.swift in Sources */,
 				0926BBD6289C2DA4009BB6D4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
