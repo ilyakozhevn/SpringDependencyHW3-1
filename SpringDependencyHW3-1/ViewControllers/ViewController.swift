@@ -10,10 +10,10 @@ import SpringAnimation
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var animationView: SpringView!
-    @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet private weak var animationView: SpringView!
+    @IBOutlet private weak var infoLabel: UILabel!
     
-    @IBOutlet weak var nextAnimationButton: UIButton!
+    @IBOutlet private weak var nextAnimationButton: UIButton!
     
     private var animation = AnimationParameters.getRandomParameters()
     
@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         infoLabel.text = animation.description
     }
     
-    @IBAction func animatePressed() {
+    @IBAction private func animatePressed() {
         setupAnimation()
         infoLabel.text = animation.description
         animationView.animate()
