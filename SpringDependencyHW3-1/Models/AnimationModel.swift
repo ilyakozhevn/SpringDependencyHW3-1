@@ -6,11 +6,15 @@
 //
 
 struct AnimationParameters {
-    var preset: String
-    var curve: String
-    var force: Float
-    var duration: Float
-    var velocity: Float
+    let preset: String
+    let curve: String
+    let force: Float
+    let duration: Float
+    let velocity: Float
+    
+    var description: String {
+        "Preset: \(preset) \nCurve: \(curve) \nForce: \(String(format: "%.2f", force)) \nDuration: \(String(format: "%.2f", duration)) \nVelocity: \(String(format: "%.2f", velocity))"
+    }
     
     static func getRandomParameters() -> AnimationParameters {
         AnimationParameters(

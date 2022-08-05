@@ -11,11 +11,7 @@ import SpringAnimation
 class ViewController: UIViewController {
 
     @IBOutlet weak var animationView: SpringView!
-    @IBOutlet weak var animationLabel: UILabel!
-    @IBOutlet weak var curveLabel: UILabel!
-    @IBOutlet weak var forceLabel: UILabel!
-    @IBOutlet weak var durationLabel: UILabel!
-    @IBOutlet weak var velocityLabel: UILabel!
+    @IBOutlet weak var infoLabel: UILabel!
     
     @IBOutlet weak var nextAnimationButton: UIButton!
     
@@ -25,17 +21,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         animationView.layer.cornerRadius = 10
         
-        updateInfoOnLabels()
+        infoLabel.text = animation.description
     }
     
     @IBAction func animatePressed() {
         setupAnimation()
-        updateInfoOnLabels()
+        infoLabel.text = animation.description
         animationView.animate()
         getNextPreset()
     }
     
-    func setupAnimation() {
+    private func setupAnimation() {
         animationView.animation = animation.preset
         animationView.curve = animation.curve
         animationView.force = CGFloat(animation.force)
@@ -43,22 +39,7 @@ class ViewController: UIViewController {
         animationView.velocity = CGFloat(animation.velocity)
     }
     
-    func updateInfoOnLabels() {
-        animationLabel.text = "Preset: " + animation.preset
-        curveLabel.text = "Curve: " + animation.curve
-        forceLabel.text = "Force: " + animation.force.formatted()
-        durationLabel.text = "Duration: " + animation.duration.formatted()
-        velocityLabel.text = "Velocity: " + animation.velocity.formatted()
-    }
-    
-    func randomiseAnimationParameters() {
-        animationView.curve = AnimationCurve.allCases.shuffled().first?.rawValue ?? ""
-        animationView.force = CGFloat.random(in: 1...5)
-        animationView.duration = CGFloat.random(in: 0.5...2)
-        animationView.velocity = CGFloat.random(in: 0...1)
-    }
-    
-    func getNextPreset() {
+    private func getNextPreset() {
         animation = AnimationParameters.getRandomParameters()
         nextAnimationButton.setTitle("Run \(animation.preset)", for: .normal)
     }
