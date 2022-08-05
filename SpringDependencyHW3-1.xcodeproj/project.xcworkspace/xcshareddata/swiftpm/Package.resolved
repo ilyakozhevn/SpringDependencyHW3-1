@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "springanimation",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/LexDeBash/SpringAnimation",
+      "state" : {
+        "branch" : "main",
+        "revision" : "63af7baded41c9aae0e845d4d3b114a459b9688a"
+      }
+    }
+  ],
+  "version" : 2
+}
