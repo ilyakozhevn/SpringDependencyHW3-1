@@ -8,21 +8,27 @@
 struct AnimationParameters {
     let preset: String
     let curve: String
-    let force: Float
-    let duration: Float
-    let velocity: Float
+    let force: Double
+    let duration: Double
+    let velocity: Double
     
     var description: String {
-        "Preset: \(preset) \nCurve: \(curve) \nForce: \(String(format: "%.2f", force)) \nDuration: \(String(format: "%.2f", duration)) \nVelocity: \(String(format: "%.2f", velocity))"
+        """
+        Preset: \(preset)
+        Curve: \(curve)
+        Force: \(String(format: "%.2f", force))
+        Duration: \(String(format: "%.2f", duration))
+        Velocity: \(String(format: "%.2f", velocity))
+        """
     }
     
     static func getRandomParameters() -> AnimationParameters {
         AnimationParameters(
-            preset: DataStore.shared.presets.shuffled().first?.rawValue ?? "",
-            curve: DataStore.shared.curves.shuffled().first?.rawValue ?? "",
-            force: Float.random(in: 1...5),
-            duration: Float.random(in: 0.5...2),
-            velocity: Float.random(in: 0...1)
+            preset: DataStore.shared.presets.randomElement()?.rawValue ?? "",
+            curve: DataStore.shared.curves.randomElement()?.rawValue ?? "",
+            force: Double.random(in: 1...5),
+            duration: Double.random(in: 0.5...2),
+            velocity: Double.random(in: 0...1)
         )
     }
 }

@@ -11,7 +11,11 @@ import SpringAnimation
 class ViewController: UIViewController {
 
     @IBOutlet private weak var animationView: SpringView!
-    @IBOutlet private weak var infoLabel: UILabel!
+    @IBOutlet private weak var infoLabel: UILabel! {
+        didSet {
+            infoLabel.text = animation.description
+        }
+    }
     
     @IBOutlet private weak var nextAnimationButton: UIButton!
     
@@ -20,8 +24,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         animationView.layer.cornerRadius = 10
-        
-        infoLabel.text = animation.description
     }
     
     @IBAction private func animatePressed() {
@@ -34,9 +36,9 @@ class ViewController: UIViewController {
     private func setupAnimation() {
         animationView.animation = animation.preset
         animationView.curve = animation.curve
-        animationView.force = CGFloat(animation.force)
-        animationView.duration = CGFloat(animation.duration)
-        animationView.velocity = CGFloat(animation.velocity)
+        animationView.force = animation.force
+        animationView.duration = animation.duration
+        animationView.velocity = animation.velocity
     }
     
     private func getNextPreset() {
